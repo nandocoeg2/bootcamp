@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Ini title</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <nav>
+    <div class="headWrapper">
+      <div class="judul">
+        <h1 class="judulTitle">ini nando</h1>
+      </div>
+      <div class="cariWrapper">
+        <input type="search" class="cariStyle" />
+      </div>
+    </div>
+  </nav>
+
+  <body>
+    <div class="bodyWrapper">
+      <div class="sidebarWrapper">
+        <ul>
+          <h2 class="judulSidebar">Ini sidebar</h2>
+          <li class="sidebarList"><a href="#">Home</a></li>
+          <li class="sidebarList"><a href="#">About</a></li>
+          <li class="sidebarList"><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="contentWrapper">
+        <div class="isiKontenWrapper">
+          <h2 class="judulKonten">Ini Maps</h2>
+          <iframe
+            style="width: 100%; border: 0"
+            frameborder="0"
+            src="https://www.google.com/maps/embed/v1/place?q=Jakarta,+Indonesia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+          ></iframe>
+        </div>
+        <div class="isiKontenWrapper">
+          <div class="slideshow-container">
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <iframe
+                width="100%"
+                height="315"
+                src="https://www.youtube.com/embed/f9SEV2olUwQ"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+              <div class="text">Caption Text</div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <iframe
+                width="100%"
+                height="315"
+                src="https://www.youtube.com/embed/f9SEV2olUwQ"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+              <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <iframe
+                width="100%"
+                height="315"
+                src="https://www.youtube.com/embed/f9SEV2olUwQ"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+              <div class="text">Caption Three</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+          </div>
+          <br />
+
+          <div style="text-align: center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
