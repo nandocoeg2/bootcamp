@@ -28,15 +28,15 @@
         </ul>
       </div>
       <div class="contentWrapper">
-        <div class="isiKontenWrapper">
+        <!-- <div class="isiKontenWrapper">
           <h2 class="judulKonten">Ini Maps</h2>
           <iframe
             style="width: 100%; border: 0"
             frameborder="0"
             src="https://www.google.com/maps/embed/v1/place?q=Jakarta,+Indonesia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
           ></iframe>
-        </div>
-        <div class="isiKontenWrapper">
+
+          <h2 class="judulKonten">Ini Video</h2>
           <div class="slideshow-container">
             <div class="mySlides fade">
               <div class="numbertext">1 / 3</div>
@@ -57,7 +57,7 @@
               <iframe
                 width="100%"
                 height="315"
-                src="https://www.youtube.com/embed/f9SEV2olUwQ"
+                src="https://www.youtube.com/embed/kEnDp_zN9U"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -71,7 +71,7 @@
               <iframe
                 width="100%"
                 height="315"
-                src="https://www.youtube.com/embed/f9SEV2olUwQ"
+                src="https://www.youtube.com/embed/ClGk-Z1PaiI"
                 title="YouTube video player"
                 frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -90,8 +90,122 @@
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
           </div>
+        </div> -->
+        <div class="isiKontenWrapper">
+        </div>
+        <div class="isiKontenWrapper">
+          <h2>Ini table</h2>
+          <table id="customers">
+            <tr>
+              <th>Company</th>
+              <th>Contact</th>
+              <th>Country</th>
+              <th>Action</th>
+            </tr>
+            <tr>
+              <td>Alfreds Futterkiste</td>
+              <td>Maria Anders</td>
+              <td>Germany</td>
+              <td><button onclick="removeRow(this)">Remove</button></td>
+            </tr>
+            <tr>
+              <td>Berglunds snabbköp</td>
+              <td>Christina Berglund</td>
+              <td>Sweden</td>
+              <td><button onclick="removeRow(this)">Remove</button></td>
+            </tr>
+            <tr>
+              <td>Centro comercial Moctezuma</td>
+              <td>Francisco Chang</td>
+              <td>Mexico</td>
+              <td><button onclick="removeRow(this)">Remove</button></td>
+            </tr>
+            <!-- Add more rows here if needed -->
+          </table>
+        </div>
+        <div class="isiKontenWrapper">
+          <h2 class="judulKonten">Ini Form</h2>
+        </br>
+        Enter your company: <input type="text" id="company" onchange="myFunction()">
+        </br>
+        Enter your contact: <input type="text" id="contact" onchange="myFunction()">
+        </br>
+        Enter your country: <input type="text" id="country" onchange="myFunction()">
+      </br>
+            
+      <button id="addButton" onclick="addRow()">Add Row</button>
+    </div>
+    
+    <div class="isiKontenWrapper">
+      <h2 class="judulKonten">Ini input login</h2>
+      <div id="loginPage">
+        </br> 
+        Username : <input type="text" placeholder="username" id="username">
+      </br>
+      Password : <input type="password" placeholder="password" id="password">
+      
+    </br>
+      <button id="loginSubmit" onclick="login()">Login</button>
+    </div>
+    <button id="logoutSubmit" onclick="logout()">Logout</button>
+
         </div>
       </div>
     </div>
+
+    <script>
+      // Function to add a new row to the table
+      function addRow() {
+        var table = document.getElementById("customers");
+        var newRow = table.insertRow(table.rows.length - 1);
+
+        var companyCell = newRow.insertCell(0);
+        var contactCell = newRow.insertCell(1);
+        var countryCell = newRow.insertCell(2);
+        var actionCell = newRow.insertCell(3);
+
+
+        companyCell.innerHTML = document.getElementById("company").value;
+        contactCell.innerHTML = document.getElementById("contact").value;
+        countryCell.innerHTML = document.getElementById("country").value;
+
+        actionCell.innerHTML =
+          '<button onclick="removeRow(this)">Remove</button>';
+      }
+
+      function removeRow(button) {
+        var row = button.parentNode.parentNode;
+        row.parentNode.removeChild(row);
+      }
+      
+      function myFunction() {
+        var x = document.getElementById("company").value;
+        var y = document.getElementById("contact").value;
+        var z = document.getElementById("country").value;
+      }
+      
+
+      function login() {
+        var username = document.getElementById("username").value;
+          var password = document.getElementById("password").value;
+
+          if (username === "aa" && password === "ss") {
+            alert("Login berhasil!");
+            window.location.href = "#";
+            document.getElementById('loginPage').style.visibility= 'hidden';
+                      
+          } else {
+            alert("Username atau password salah. Silakan coba lagi!");
+            document.getElementById("username").value = "";
+            document.getElementById("password").value = "";
+          }
+      }
+      
+      function logout() {
+        document.getElementById('loginPage').style.visibility= 'visible';
+        alert("HEbat !! Berhsil Logout!!! ")
+
+      }
+      </script>
   </body>
 </html>
