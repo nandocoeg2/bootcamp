@@ -27,7 +27,9 @@ const detailTransaction = [
 function login(username) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      const user = users.filter((user) => {user.username === username});
+      const user = users.filter((user) => {
+        user.username === username;
+      });
       if (user) {
         resolve(user);
       } else {
